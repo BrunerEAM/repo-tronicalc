@@ -1,10 +1,10 @@
-# ⚡ Calculadora Eletrônica Profissional
+#  Calculadora Eletrônica Profissional
 
 Uma ferramenta web completa para técnicos, estudantes e profissionais da área de eletrônica realizarem cálculos rápidos e precisos no dia a dia.
 
 ---
 
-## 🚀 Sobre o Projeto
+##  Sobre o Projeto
 
 A **Calculadora Eletrônica Profissional** foi desenvolvida com o objetivo de centralizar as principais fórmulas e utilidades da eletrônica em uma única interface moderna, prática e totalmente offline.
 
@@ -61,7 +61,7 @@ Ideal para uso em:
 
 ---
 
-## 💻 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 * HTML5
 * CSS3
@@ -69,7 +69,7 @@ Ideal para uso em:
 
 ---
 
-## 🎨 Interface
+##  Interface
 
 * Tema escuro moderno
 * Layout baseado em cards
@@ -78,7 +78,7 @@ Ideal para uso em:
 
 ---
 
-## 📦 Como usar
+##  Como usar
 
 1. Clone o repositório:
 
@@ -103,7 +103,7 @@ index.html
 
 ---
 
-## 🧩 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 calculadora-eletronica/
@@ -119,17 +119,11 @@ calculadora-eletronica/
 
 ---
 
-## 💎 Diferenciais
 
-* ✔ Interface profissional
-* ✔ Fácil de usar
-* ✔ 100% offline
-* ✔ Ideal para técnicos de campo
-* ✔ Código simples e escalável
 
 ---
 
-## 🚀 Roadmap (Próximas Funcionalidades)
+## Roadmap (Próximas Funcionalidades)
 
 * [ ] Cálculo de LED
 * [ ] Capacitores (série/paralelo)
@@ -141,13 +135,11 @@ calculadora-eletronica/
 
 ---
 
-## 📸 Preview
 
-*(adicione prints aqui depois)*
 
----
 
-## 📄 Licença
+
+##  Licença
 
 Este projeto está sob a licença MIT.
 
@@ -163,13 +155,13 @@ Este projeto está sob a licença MIT.
 
 ---
 
-## ⭐ Apoie o Projeto
+## Apoie o Projeto para dar uma força
 
 Se este projeto te ajudou, deixe uma estrela ⭐ no repositório!
 
 ---
 
-## 🧠 Observação
+## Observações
 
 Este projeto está em constante evolução e foi pensado para se tornar uma ferramenta completa para profissionais da área de eletrônica.
 
