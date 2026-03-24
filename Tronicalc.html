@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sueguer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+</head>
+<body>
+
+  <header class="header">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <div>
+        <h1>Sr. Aksel Felipe Bruner</h1>
+        <span class="subtitle">Ferramenta Profissional para Técnicos</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+
+    <!--CARD REGRA DE 3-->
+    <section class="card">
+      <h2>📐 Regra de 3</h2>
+      <p>Calcule proporções rapidamente.</p>
+    <div class="acoes">
+       <button class="btn" onclick="abrirModal()">Abrir</button>
+    </div>
+
+    <br>
+
+    <div class="resumeCard">
+      <p>
+        A regra de três serve para calcular um valor desconhecido quando há uma relação de proporcionalidade entre duas ou mais grandezas, sendo essencial em problemas do dia a dia e acadêmicos para ajustar receitas, calcular velocidades, determinar custos ou converter medidas, usando os tipos simples (duas grandezas) ou composta (três ou mais grandezas). Ela ajuda a encontrar o "quarto termo" em uma proporção, seja ela direta (ambas aumentam/diminuem juntas) ou inversa (uma aumenta enquanto a outra diminui).
+      </p>
+
+    </div>
+    </section>
+
+<!--CARD LEI DE OHM-->
+
+    <section class="card">
+      <h2>⚡ Lei de Ohm</h2>
+      <p>Tensão, corrente, resistência e potência.</p>
+      
+      <div class="acoes">
+        <button class="btn" onclick="abrirModalOhm()">Abrir</button>
+      </div>
+
+      <br>
+
+      <div class="resumecard">
+        <p>
+
+          A lei de Ohm diz que a diferença de tensão entre dois pontos, a corrente elétrica que flui entre eles e a resistência do percurso da corrente são todas proporcionais e relacionadas entre si.
+
+          A lei de Ohm explica a relação entre a tensão, a corrente e a resistência, declarando que a corrente através de um condutor entre dois pontos é diretamente proporcional à diferença de potencial entre eles.
+
+          Isso pode ser expresso matematicamente nas seguintes equações em termos de V a diferença de tensão, I a corrente em amperes e resistência R em ohms.
+        </p>
+
+      </div>
+
+    </section>
+
+<!--CARD RESISTORES-->
+
+    <section class="card">
+      <h2>🔌 Resistores</h2>
+      <p>Cálculo em série e paralelo.</p>
+      
+    <div class="acoes">
+		  <button class="btn" onclick="abrirModalResistores()">Abrir</button>
+	  </div>
+    <br>
+    <div class="resumeCard">
+
+      <p>
+        Resistores são componentes eletrônicos cuja principal função é limitar o fluxo de cargas elétricas por meio da conversão da energia elétrica em energia térmica
+        Essa ferramenta é crucial para engenheiros, estudantes e entusiastas para garantir que os componentes funcionem com segurança, evitando a queima por sobrecarga térmica.
+      </p>
+    </div>
+
+    </section>
+
+<!--CARD CÓDIGO DE CORES-->
+
+    <section class="card">
+      <h2>🎨 Código de Cores</h2>
+      <p>Identifique valores por faixas.</p>
+      
+    <div class="acoes">
+    <button class="btn" onclick="abrirModalCores()">Abrir</button>
+		</div>
+    <br>
+    <div class="resumeCard">
+      <p>
+        Esta ferramenta é usada para decodificar as informações das faixas coloridas dos resistores de terminais axiais. Selecione o número de faixas e, em seguida, as respectivas cores para determinar o valor e a tolerância dos resistores ou ver todos os resistores que a Sueguer tem para oferecer.
+      </p>
+    </div>
+
+    </section>
+
+<!--CARD DIVISOR DE TENSÃO-->
+
+  <section class="card">
+  <h2>📉 Divisor de Tensão</h2>
+  <p>Calcule tensão de saída em circuitos com dois resistores.</p>
+
+  <div class="acoes">
+    <button class="btn" onclick="abrirModalDivisor()">Abrir</button>
+  </div>
+</section>
+
+
+  </main>
+
+  <footer class="footer">
+    <small>© 2026 Sueguer - Ferramenta para Técnicos de Eletrônica</small>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/app.js"></script>
+
+
+  <!-- Abaixo contem o conteúdo dos modais dos cards-->
+
+
+  <!--MODAL REGRA DE 3-->
+  
+  <div class="modal-overlay" id="modalRegra3">
+  <div class="modal">
+    
+    <div class="modal-header">
+      <h2>📐 Regra de 3</h2>
+      <button class="close-btn" onclick="fecharModal()">×</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="regra3-grid">
+        <input type="number" id="valorA" placeholder="A" />
+        <span>→</span>
+        <input type="number" id="valorB" placeholder="B" />
+
+        <input type="number" id="valorC" placeholder="C" />
+        <span>→</span>
+        <input type="text" id="valorX" placeholder="X" disabled />
+      </div>
+
+      <button class="btn calcular" onclick="calcularRegra3()">Calcular</button>
+      <button class="btn secundario" onclick="limparCampos()">Limpar</button>
+
+      <div class="resultado" id="resultadoRegra3"></div>
+    </div>
+
+  </div>
+</div>
+
+
+<!--MODAL LEI DE OHM-->
+
+<div class="modal-overlay" id="modalOhm">
+  <div class="modal">
+
+    <div class="modal-header">
+      <h2>⚡ Lei de Ohm</h2>
+      <button class="close-btn" onclick="fecharModalOhm()">×</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="ohm-grid">
+
+        <div class="campo">
+          <label>Tensão (V)</label>
+          <input type="number" id="tensao" placeholder="Volts">
+        </div>
+
+        <div class="campo">
+          <label>Corrente (A)</label>
+          <input type="number" id="corrente" placeholder="Ampères">
+        </div>
+
+        <div class="campo">
+          <label>Resistência (Ω)</label>
+          <input type="number" id="resistencia" placeholder="Ohms">
+        </div>
+
+        <div class="campo">
+          <label>Potência (W)</label>
+          <input type="text" id="potencia" placeholder="Watts" disabled>
+        </div>
+
+      </div>
+
+      <button class="btn calcular" onclick="calcularOhm()">Calcular</button>
+      <button class="btn secundario" onclick="limparOhm()">Limpar</button>
+
+      <div class="resultado" id="resultadoOhm"></div>
+    </div>
+
+  </div>
+</div>
+
+<!--MODAL RESISTORES-->
+
+<div class="modal-overlay" id="modalResistores">
+  <div class="modal">
+
+    <div class="modal-header">
+      <h2>🔌 Cálculo de Resistores</h2>
+      <button class="close-btn" onclick="fecharModalResistores()">×</button>
+    </div>
+
+    <div class="modal-body">
+
+      <div class="tipo-resistor">
+        <label>
+          <input type="radio" name="tipo" value="serie" checked>
+          Série
+        </label>
+        <label>
+          <input type="radio" name="tipo" value="paralelo">
+          Paralelo
+        </label>
+      </div>
+
+      <div id="listaResistores">
+        <input type="number" class="resistor" placeholder="Resistor 1 (Ω)">
+        <input type="number" class="resistor" placeholder="Resistor 2 (Ω)">
+      </div>
+
+      <button class="btn secundario" onclick="adicionarResistor()">+ Adicionar resistor</button>
+
+      <button class="btn calcular" onclick="calcularResistores()">Calcular</button>
+      <button class="btn secundario" onclick="limparResistores()">Limpar</button>
+
+      <div class="resultado" id="resultadoResistores"></div>
+
+    </div>
+
+  </div>
+</div>
+
+<!--MODAL CÓDIGO DE CORES-->
+
+<div class="modal-overlay" id="modalCores">
+  <div class="modal">
+
+    <div class="modal-header">
+      <h2>🎨 Código de Cores do Resistor</h2>
+      <button class="close-btn" onclick="fecharModalCores()">×</button>
+    </div>
+
+    <div class="modal-body">
+	
+	<div class="tipo-resistor">
+  <label>
+    <input type="radio" name="tipoFaixa" value="4" checked>
+    4 Faixas
+  </label>
+  <label>
+    <input type="radio" name="tipoFaixa" value="5">
+    5 Faixas
+  </label>
+</div>
+
+
+      <div class="cores-grid">
+        <select id="faixa1">
+          <option value="">1ª Faixa</option>
+          <option value="0">Preto</option>
+          <option value="1">Marrom</option>
+          <option value="2">Vermelho</option>
+          <option value="3">Laranja</option>
+          <option value="4">Amarelo</option>
+          <option value="5">Verde</option>
+          <option value="6">Azul</option>
+          <option value="7">Violeta</option>
+          <option value="8">Cinza</option>
+          <option value="9">Branco</option>
+        </select>
+
+        <select id="faixa2">
+          <option value="">2ª Faixa</option>
+          <option value="0">Preto</option>
+          <option value="1">Marrom</option>
+          <option value="2">Vermelho</option>
+          <option value="3">Laranja</option>
+          <option value="4">Amarelo</option>
+          <option value="5">Verde</option>
+          <option value="6">Azul</option>
+          <option value="7">Violeta</option>
+          <option value="8">Cinza</option>
+          <option value="9">Branco</option>
+        </select>
+		
+		
+		<select id="faixa3" style="display:none">
+		  <option value="">3ª Faixa</option>
+		  <option value="0">Preto</option>
+		  <option value="1">Marrom</option>
+		  <option value="2">Vermelho</option>
+		  <option value="3">Laranja</option>
+		  <option value="4">Amarelo</option>
+		  <option value="5">Verde</option>
+		  <option value="6">Azul</option>
+		  <option value="7">Violeta</option>
+		  <option value="8">Cinza</option>
+		  <option value="9">Branco</option>
+		</select>
+
+
+        <select id="multiplicador">
+          <option value="">Multiplicador</option>
+          <option value="1">Preto (×1)</option>
+          <option value="10">Marrom (×10)</option>
+          <option value="100">Vermelho (×100)</option>
+          <option value="1000">Laranja (×1k)</option>
+          <option value="10000">Amarelo (×10k)</option>
+          <option value="100000">Verde (×100k)</option>
+          <option value="1000000">Azul (×1M)</option>
+        </select>
+
+        <select id="tolerancia">
+          <option value="">Tolerância</option>
+          <option value="±1%">Marrom (±1%)</option>
+          <option value="±2%">Vermelho (±2%)</option>
+          <option value="±5%">Dourado (±5%)</option>
+          <option value="±5%">Azul (±0.25%)</option>
+          <option value="±10%">Prata (±10%)</option>
+		      <option value="±05%">Verde (±0.5%)</option>
+		      <option value="±0.05%">Cinza (±0.05%)</option>
+          <option value="±05%">Violeta (±0.1%)</option>
+
+        </select>
+      </div>
+
+      <button class="btn calcular" onclick="calcularCores()">Calcular</button>
+      <button class="btn secundario" onclick="limparCores()">Limpar</button>
+
+      <div class="resultado" id="resultadoCores"></div>
+
+    </div>
+  </div>
+</div>
+
+<!--MODAL DIVISOR DE TENSÃO-->
+<div class="modal-overlay" id="modalDivisor">
+  <div class="modal">
+
+    <div class="modal-header">
+      <h2>📉 Divisor de Tensão</h2>
+      <button class="close-btn" onclick="fecharModalDivisor()">×</button>
+    </div>
+
+    <div class="modal-body">
+
+      <div class="ohm-grid">
+
+        <div class="tipo-resistor">
+  <label>
+    <input type="radio" name="modoDivisor" value="vout" checked>
+    Calcular Vout
+  </label>
+
+  <label>
+    <input type="radio" name="modoDivisor" value="r2">
+    Descobrir R2
+  </label>
+
+  <label>
+    <input type="radio" name="modoDivisor" value="r1">
+    Descobrir R1
+  </label>
+</div>
+
+
+        <div class="campo">
+          <label>Tensão de Entrada (Vin)</label>
+          <input type="number" id="vin" placeholder="Volts">
+        </div>
+
+        <div class="campo">
+          <label>Resistor R1 (Ω)</label>
+          <input type="number" id="r1" placeholder="Ohms">
+        </div>
+
+        <div class="campo">
+          <label>Resistor R2 (Ω)</label>
+          <input type="number" id="r2" placeholder="Ohms">
+        </div>
+
+        <div class="campo">
+          <label>Tensão de Saída (Vout)</label>
+          <input type="text" id="vout" disabled>
+        </div>
+
+      </div>
+
+      <button class="btn calcular" onclick="calcularDivisor()">Calcular</button>
+      <button class="btn secundario" onclick="limparDivisor()">Limpar</button>
+
+      <div class="resultado" id="resultadoDivisor"></div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>
